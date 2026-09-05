@@ -1,3 +1,14 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: rgb(25, 52, 78);
+}
+
 header {
     position: relative;
     width: 100%;
@@ -7,14 +18,6 @@ header {
     width: 100%;
     display: block;
     opacity: 0.47;
-}
-
-
-body{
-    margin-top: 0;
-    margin-right: 0;
-    margin-left: 0;
-    background-color: rgb(25, 52, 78);
 }
 
 .logo {
@@ -59,18 +62,186 @@ nav a:hover{
     left: 50px;
     bottom: 170px;
     font-family: "Google Sans Flex", sans-serif;
-    line-height: 0.2;
-    font-weight:bold;
 }
 
 .titulo {
     font-size: 70px;
     margin: 0;
-    line-height: 0.1;
+    line-height: 1;
     color: white;
+    font-weight: bold;
 }
 
 .subtitulo {
     font-size: 25px;
+    margin: 10px 0 0 0;
+    line-height: 1;
     color: rgb(173, 202, 255);
+}
+
+.carrossel {
+    width: 80%;
+    margin: 70px auto 0;
+    overflow: hidden;
+    position: relative;
+    padding: 100px 0;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.pictures {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+
+.setaesquerda,
+.setadireita {
+    position: absolute;
+    top: 45%;
+    z-index: 10;
+    width: 45px;
+    height: 70px;
+    background-color: rgba(25, 52, 78, 0.75);
+    border: 2px solid rgb(173, 202, 255);
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s ease;
+}
+
+.setaesquerda {
+    left: 10px;
+}
+
+.setadireita {
+    right: 10px;
+}
+
+.setaesquerda:hover,
+.setadireita:hover {
+    background-color: rgb(173, 202, 255);
+    color: rgb(25, 52, 78);
+    transform: scale(1.08);
+}
+
+
+.sobre {
+    width: 90%;
+    min-height: 350px;
+    margin: 60px auto 0;
+    padding: 50px 60px 40px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(5, 20, 49);
+    border-radius: 30px;
+    font-family: "Google Sans Flex", sans-serif;
+}
+
+.caixa {
+    width: 55%;
+}
+
+.soobre{
+    color: rgb(173, 202, 255);
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.texto{
+    color: rgb(255, 254, 254);
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+.barco {
+    width: 300px;
+    height: auto;
+    margin-right: 30px;
+    margin-left: 80px;
+}
+
+.organizadores {
+    width: 90%;
+    margin: 60px auto 0;
+    padding: 50px 60px;
+    font-family: "Google Sans Flex", sans-serif;
+}
+
+.titulo_organizadores {
+    color: rgb(173, 202, 255);
+    font-size: 35px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.campo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.BancoBrasil {
+    width: 80px;
+}
+
+.toei {
+    width: 115px;
+}
+
+.crunchy {
+    width: 80px;
+}
+
+footer {
+    position: relative;
+    margin-top: 60px;
+    padding: 40px 60px;
+    font-family: "Google Sans Flex", sans-serif;
+    color: white;
+    background-color:rgb(5, 20, 49);
+}
+
+.contatos {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.redes {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.redes a {
+    display: block;
+    transition: 0.2s;
+}
+
+.redes a:hover {
+    transform: scale(1.15);
+}
+
+.redes img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+footer p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    font-size: 14px;
+    white-space: nowrap;
 }
